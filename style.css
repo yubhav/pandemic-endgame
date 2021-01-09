@@ -1,0 +1,14 @@
+body {
+    
+    color: black;
+    background-color: grey;
+    text-align: center;
+  }
+  
+  button {
+    background-color: palevioletred;
+    font-size: large;
+    font-weight: bold;
+    padding: 8px 8px;
+    border-radius: 5px;
+  }
