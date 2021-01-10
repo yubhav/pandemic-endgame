@@ -45,7 +45,12 @@ function resetGame() {
   selectSkin = select('#skin');
   button = select('#startGame');
 
-  // onclick functionality to be added 
+  button.mousePressed(()=> {
+    player.selectAvenger();
+    menu = select('#chooseCharacter');
+    menu.hide();
+    start();
+  })
 }
 
 function start(){
@@ -64,4 +69,53 @@ function keyPressed() {
 
 function loadBackground() {
     return backgroundImage
+}
+
+// main functionality of game 
+function draw(){
+  if (started) {
+    
+    background(166);
+    background(loadBackground());
+    
+    text(`Score: ${score}`, 10, 10, 200, 100);
+    text(`Level: ${level}`, 820, 10, 200, 100);
+  
+    // new virus
+    if (frameCount > timeWas + timer && timer != 0) {
+      timeWas = frameCount;
+      timer = random(100, timer);
+      virus.push(new ObjectVirus());
+    }
+
+    for(let v of virus) {
+      v.move();
+      v.draw();
+
+      //collision
+      if(player.hits(v)){
+        noLoop();
+        gameOver = select('#gameOver');
+        gameOver.show();
+        button = select('#playAgain');
+  
+        button.mousePressed(()=> {
+          started = false;
+          resetGame();
+        }) 
+      }
+
+      // Caclulate score and level
+      if (v.x == 0) {
+        score += 1;
+        if (score % 5 == 0) {
+          level += 1;
+          timer -= 50;
+        }
+      }
+    }
+    
+    player.draw();
+    player.move();
+  }
 }

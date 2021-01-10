@@ -12,8 +12,8 @@ class ObjectVirus {
     }
     
     draw() {
-        let v = this.virusTypes[0]
-        // let v = random(this.virusTypes);
+        // let v = this.virusTypes[0]
+        let v = random(this.virusTypes);
         image(v, this.x, this.y, this.size, this.size);
     }
 }
