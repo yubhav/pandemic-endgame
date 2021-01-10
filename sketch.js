@@ -11,15 +11,15 @@ let timeWas = 0;
 
 
 function preload(){
-  virusImage = loadImage('./images/object-virus.png');
-  backgroundImage = loadImage('./images/background-image.png');
+  virusImage = loadImage('./img/object-virus.png');
+  backgroundImage = loadImage('./img/background-image.png');
 
   // characters
-  captamerica = loadImage('./images/captain-america.png');
-  ironman = loadImage('./images/iron-man.png');
-  thor = loadImage('./images/thor.png');
-  hulk =  loadImage('./images/hulk.png');
-  widow = loadImage('./images/black-widow.png');
+  captamerica = loadImage('./img/captain-america.png');
+  ironman = loadImage('./img/iron-man.png');
+  thor = loadImage('./img/thor.png');
+  hulk =  loadImage('./img/hulk.png');
+  widow = loadImage('./img/black-widow.png');
 }
 
 function setup() {
