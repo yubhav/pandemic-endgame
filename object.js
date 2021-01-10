@@ -6,4 +6,14 @@ class ObjectVirus {
       this.y = height - this.size;
       this.virusTypes = [objectImg]
     }
+
+    move() {
+        this.x -= 5;
+    }
+    
+    draw() {
+        let v = this.virusTypes[0]
+        // let v = random(this.virusTypes);
+        image(v, this.x, this.y, this.size, this.size);
+    }
 }
