@@ -14,7 +14,7 @@ body {
   }
 
   #heading {
-    font-family:Papyrus;
+    font-family: 'Press Start 2P', cursive;
     font-size: 40px;
   }
 
@@ -22,6 +22,6 @@ body {
     padding: 11px 11px;
     border-radius: 4px;
     font-size: large;
-    font-family:Garamond;
+    font-family: 'Press Start 2P', cursive;
     margin-top: auto;
   }

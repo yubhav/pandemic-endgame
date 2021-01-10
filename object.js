@@ -1,7 +1,7 @@
 class ObjectVirus {
 
     constructor() {
-      this.size = 45;
+      this.size = 50;
       this.x = width;
       this.y = height - this.size;
       this.virusTypes = [virusImage]
