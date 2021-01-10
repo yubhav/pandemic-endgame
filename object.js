@@ -4,7 +4,7 @@ class ObjectVirus {
       this.size = 45;
       this.x = width;
       this.y = height - this.size;
-      this.virusTypes = [objectImg]
+      this.virusTypes = [virusImage]
     }
 
     move() {
