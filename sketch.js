@@ -1,6 +1,6 @@
 let started = false;
 
-let keyWorker;
+let player;
 let virus = [];
 
 let score = 0;
@@ -13,6 +13,13 @@ let timeWas = 0;
 function preload(){
   virusImage = loadImage('./images/object-virus.png');
   backgroundImage = loadImage('./images/background-image.png');
+
+  // characters
+  captamerica = loadImage('./images/captain-america.png');
+  ironman = loadImage('./images/iron-man.png');
+  thor = loadImage('./images/thor.png');
+  hulk =  loadImage('./images/hulk.png');
+  widow = loadImage('./images/black-widow.png');
 }
 
 function setup() {
@@ -33,7 +40,12 @@ function resetGame() {
   menu = select('#chooseCharacter');
   menu.show();
 
-  //keyworker to be added
+  // select player 
+  player = new Avenger();
+  selectSkin = select('#skin');
+  button = select('#startGame');
+
+  // onclick functionality to be added 
 }
 
 function start(){
@@ -45,9 +57,9 @@ function start(){
 }
 
 function keyPressed() {
-    if (keyIsDown(32) || keyIsDown(38)) {
-      keyWorker.jump();
-    }
+  if (keyIsDown(32) || keyIsDown(38)) {
+    player.jump();
+  }
 }
 
 function loadBackground() {
